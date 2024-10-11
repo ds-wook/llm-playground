@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.routers.index import index_router
+from api.routers.index import index_router
 
 # FastAPI 객체 생성
 app = FastAPI(docs_url="/docs", openapi_url="/open-api-docs")
@@ -11,4 +11,4 @@ app.include_router(index_router, prefix="/api")
 
 @app.get("/")
 async def getHello():
-    return "Hello, KaKaoPay!"
+    return "Hello, World!"

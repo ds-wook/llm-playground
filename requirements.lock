@@ -18,12 +18,15 @@ anyio==4.6.0
     # via starlette
 black==24.10.0
     # via llm-playground
+cachetools==5.5.0
+    # via nvitop
 certifi==2022.12.7
     # via requests
 charset-normalizer==2.1.1
     # via requests
 click==8.1.7
     # via black
+    # via uvicorn
 exceptiongroup==1.2.2
     # via anyio
 fastapi==0.115.0
@@ -35,6 +38,8 @@ flake8==7.1.1
     # via llm-playground
 fsspec==2024.2.0
     # via huggingface-hub
+h11==0.14.0
+    # via uvicorn
 huggingface-hub==0.25.2
     # via accelerate
     # via tokenizers
@@ -55,6 +60,10 @@ mypy-extensions==1.0.0
 numpy==1.26.3
     # via accelerate
     # via transformers
+nvidia-ml-py==12.535.161
+    # via nvitop
+nvitop==1.3.2
+    # via llm-playground
 packaging==22.0
     # via accelerate
     # via black
@@ -66,6 +75,7 @@ platformdirs==4.3.6
     # via black
 psutil==6.0.0
     # via accelerate
+    # via nvitop
 pycodestyle==2.12.1
     # via flake8
 pydantic==2.9.2
@@ -90,6 +100,8 @@ sniffio==1.3.1
     # via anyio
 starlette==0.38.6
     # via fastapi
+termcolor==2.5.0
+    # via nvitop
 tokenizers==0.19.1
     # via transformers
 tomli==2.0.2
@@ -110,5 +122,8 @@ typing-extensions==4.9.0
     # via pydantic
     # via pydantic-core
     # via torch
+    # via uvicorn
 urllib3==1.26.13
     # via requests
+uvicorn==0.31.1
+    # via llm-playground
