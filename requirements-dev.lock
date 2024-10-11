@@ -12,13 +12,27 @@
 -e file:.
 accelerate==0.33.0
     # via llm-playground
+annotated-types==0.7.0
+    # via pydantic
+anyio==4.6.0
+    # via starlette
+black==24.10.0
+    # via llm-playground
 certifi==2022.12.7
     # via requests
 charset-normalizer==2.1.1
     # via requests
+click==8.1.7
+    # via black
+exceptiongroup==1.2.2
+    # via anyio
+fastapi==0.115.0
+    # via llm-playground
 filelock==3.13.1
     # via huggingface-hub
     # via transformers
+flake8==7.1.1
+    # via llm-playground
 fsspec==2024.2.0
     # via huggingface-hub
 huggingface-hub==0.25.2
@@ -26,20 +40,40 @@ huggingface-hub==0.25.2
     # via tokenizers
     # via transformers
 idna==3.4
+    # via anyio
     # via requests
+isort==5.13.2
+    # via llm-playground
 jinja2==3.1.3
     # via llm-playground
 markupsafe==2.1.5
     # via jinja2
+mccabe==0.7.0
+    # via flake8
+mypy-extensions==1.0.0
+    # via black
 numpy==1.26.3
     # via accelerate
     # via transformers
 packaging==22.0
     # via accelerate
+    # via black
     # via huggingface-hub
     # via transformers
+pathspec==0.12.1
+    # via black
+platformdirs==4.3.6
+    # via black
 psutil==6.0.0
     # via accelerate
+pycodestyle==2.12.1
+    # via flake8
+pydantic==2.9.2
+    # via fastapi
+pydantic-core==2.23.4
+    # via pydantic
+pyflakes==3.2.0
+    # via flake8
 pyyaml==6.0.2
     # via accelerate
     # via huggingface-hub
@@ -52,8 +86,14 @@ requests==2.28.1
 safetensors==0.4.5
     # via accelerate
     # via transformers
+sniffio==1.3.1
+    # via anyio
+starlette==0.38.6
+    # via fastapi
 tokenizers==0.19.1
     # via transformers
+tomli==2.0.2
+    # via black
 torch==1.13.1+cu116
     # via accelerate
     # via llm-playground
@@ -63,7 +103,12 @@ tqdm==4.64.1
 transformers==4.44.0
     # via llm-playground
 typing-extensions==4.9.0
+    # via anyio
+    # via black
+    # via fastapi
     # via huggingface-hub
+    # via pydantic
+    # via pydantic-core
     # via torch
 urllib3==1.26.13
     # via requests

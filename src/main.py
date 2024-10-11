@@ -8,7 +8,7 @@ messages = [{"role": "user", "content": "RAG가 어떤거야?"}]
 tokenizer = AutoTokenizer.from_pretrained(model)
 prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 pipeline = transformers.pipeline(
-    "text-generation", model=model, torch_dtype=torch.float16, device_map="auto"
+    "text-generation", model=model, torch_dtype=torch.float16s, device_map="auto"
 )
 
 outputs = pipeline(
