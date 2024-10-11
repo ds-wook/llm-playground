@@ -16,9 +16,12 @@ annotated-types==0.7.0
     # via pydantic
 anyio==4.6.0
     # via starlette
+asttokens==2.4.1
+    # via stack-data
 black==24.10.0
     # via llm-playground
 cachetools==5.5.0
+    # via google-auth
     # via nvitop
 certifi==2022.12.7
     # via requests
@@ -27,8 +30,13 @@ charset-normalizer==2.1.1
 click==8.1.7
     # via black
     # via uvicorn
+decorator==5.1.1
+    # via ipython
 exceptiongroup==1.2.2
     # via anyio
+    # via ipython
+executing==2.1.0
+    # via stack-data
 fastapi==0.115.0
     # via llm-playground
 filelock==3.13.1
@@ -38,8 +46,37 @@ flake8==7.1.1
     # via llm-playground
 fsspec==2024.2.0
     # via huggingface-hub
+google-ai-generativelanguage==0.6.10
+    # via google-generativeai
+google-api-core==2.21.0
+    # via google-ai-generativelanguage
+    # via google-api-python-client
+    # via google-generativeai
+google-api-python-client==2.149.0
+    # via google-generativeai
+google-auth==2.35.0
+    # via google-ai-generativelanguage
+    # via google-api-core
+    # via google-api-python-client
+    # via google-auth-httplib2
+    # via google-generativeai
+google-auth-httplib2==0.2.0
+    # via google-api-python-client
+google-generativeai==0.8.3
+    # via llm-playground
+googleapis-common-protos==1.65.0
+    # via google-api-core
+    # via grpcio-status
+grpcio==1.66.2
+    # via google-api-core
+    # via grpcio-status
+grpcio-status==1.66.2
+    # via google-api-core
 h11==0.14.0
     # via uvicorn
+httplib2==0.22.0
+    # via google-api-python-client
+    # via google-auth-httplib2
 huggingface-hub==0.25.2
     # via accelerate
     # via tokenizers
@@ -47,12 +84,18 @@ huggingface-hub==0.25.2
 idna==3.4
     # via anyio
     # via requests
+ipython==8.28.0
+    # via llm-playground
 isort==5.13.2
     # via llm-playground
+jedi==0.19.1
+    # via ipython
 jinja2==3.1.3
     # via llm-playground
 markupsafe==2.1.5
     # via jinja2
+matplotlib-inline==0.1.7
+    # via ipython
 mccabe==0.7.0
     # via flake8
 mypy-extensions==1.0.0
@@ -69,21 +112,55 @@ packaging==22.0
     # via black
     # via huggingface-hub
     # via transformers
+parso==0.8.4
+    # via jedi
 pathspec==0.12.1
     # via black
+pexpect==4.9.0
+    # via ipython
 platformdirs==4.3.6
     # via black
+prompt-toolkit==3.0.48
+    # via ipython
+proto-plus==1.24.0
+    # via google-ai-generativelanguage
+    # via google-api-core
+protobuf==5.28.2
+    # via google-ai-generativelanguage
+    # via google-api-core
+    # via google-generativeai
+    # via googleapis-common-protos
+    # via grpcio-status
+    # via proto-plus
 psutil==6.0.0
     # via accelerate
     # via nvitop
+ptyprocess==0.7.0
+    # via pexpect
+pure-eval==0.2.3
+    # via stack-data
+pyasn1==0.6.1
+    # via pyasn1-modules
+    # via rsa
+pyasn1-modules==0.4.1
+    # via google-auth
 pycodestyle==2.12.1
     # via flake8
 pydantic==2.9.2
     # via fastapi
+    # via google-generativeai
 pydantic-core==2.23.4
     # via pydantic
 pyflakes==3.2.0
     # via flake8
+pygments==2.18.0
+    # via ipython
+pyparsing==3.1.4
+    # via httplib2
+python-dotenv==1.0.1
+    # via llm-playground
+python-multipart==0.0.12
+    # via llm-playground
 pyyaml==6.0.2
     # via accelerate
     # via huggingface-hub
@@ -91,13 +168,20 @@ pyyaml==6.0.2
 regex==2024.9.11
     # via transformers
 requests==2.28.1
+    # via google-api-core
     # via huggingface-hub
     # via transformers
+rsa==4.9
+    # via google-auth
 safetensors==0.4.5
     # via accelerate
     # via transformers
+six==1.16.0
+    # via asttokens
 sniffio==1.3.1
     # via anyio
+stack-data==0.6.3
+    # via ipython
 starlette==0.38.6
     # via fastapi
 termcolor==2.5.0
@@ -110,20 +194,30 @@ torch==1.13.1+cu116
     # via accelerate
     # via llm-playground
 tqdm==4.64.1
+    # via google-generativeai
     # via huggingface-hub
     # via transformers
+traitlets==5.14.3
+    # via ipython
+    # via matplotlib-inline
 transformers==4.44.0
     # via llm-playground
 typing-extensions==4.9.0
     # via anyio
     # via black
     # via fastapi
+    # via google-generativeai
     # via huggingface-hub
+    # via ipython
     # via pydantic
     # via pydantic-core
     # via torch
     # via uvicorn
+uritemplate==4.1.1
+    # via google-api-python-client
 urllib3==1.26.13
     # via requests
 uvicorn==0.31.1
     # via llm-playground
+wcwidth==0.2.13
+    # via prompt-toolkit

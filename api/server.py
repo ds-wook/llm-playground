@@ -1,14 +1,25 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Form, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+from pydantic import BaseModel
 
-from api.routers.index import index_router
+from api.gemini_api import predict_response
 
-# FastAPI 객체 생성
-app = FastAPI(docs_url="/docs", openapi_url="/open-api-docs")
-
-# /api라는 경로로 index_router를 붙인다.
-app.include_router(index_router, prefix="/api")
+app = FastAPI()
+templates = Jinja2Templates(directory="api/templates")
 
 
-@app.get("/")
-async def getHello():
-    return "Hello, World!"
+class NameValues(BaseModel):
+    Check: str = None
+
+
+@app.get("/", response_class=HTMLResponse)
+def home(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
+
+
+@app.post("/gemini", response_class=HTMLResponse)
+async def handle_form(request: Request, Check: str = Form(...)):
+    # POST로 받은 데이터 처리
+    prediction = predict_response(Check)
+    return templates.TemplateResponse("llm.html", {"request": request, "prediction": prediction})
