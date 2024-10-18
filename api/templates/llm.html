@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +8,22 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding: 20px;
         }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-        }
-        h2 {
-            color: #343a40;
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-bottom: 20px;
         }
-        .prediction {
-            background-color: #007BFF;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
+        table, th, td {
+            border: 1px solid #dee2e6;
         }
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #6c757d;
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f3f5;
         }
     </style>
 </head>
@@ -47,7 +31,7 @@
     <div class="container">
         <h2>예상한 답변</h2>
         <div class="prediction">
-            {{ prediction }}
+            {{ prediction | safe }}  <!-- HTML로 변환된 Markdown 표시 -->
         </div>
         <div class="footer">
             Thank you for using our service!

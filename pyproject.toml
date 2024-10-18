@@ -20,6 +20,7 @@ dependencies = [
     "ipython>=8.28.0",
     "python-dotenv>=1.0.1",
     "python-multipart>=0.0.12",
+    "markdown>=3.7",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

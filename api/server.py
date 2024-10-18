@@ -1,3 +1,4 @@
+import markdown
 from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -17,4 +18,5 @@ def home(request: Request):
 async def post_gemini(request: Request, Check: str = Form(...)):
     # POST로 받은 데이터 처리
     prediction = predict_response(Check)
+    prediction = markdown.markdown(prediction)
     return templates.TemplateResponse("llm.html", {"request": request, "prediction": prediction})

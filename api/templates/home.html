@@ -3,14 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <style>
+        /* 전체 페이지 스타일 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* 중앙 정렬된 컨테이너 */
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        /* 제목 스타일 */
+        h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* 입력 필드 스타일 */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 버튼 스타일 */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* 버튼 호버 효과 */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-<h2>프롬프트에 입력해주세요.</h2>
 
-<form action="/gemini" method="post">
-    <input type="text" name="Check">
-    <input type="submit">
-</form>
+<div class="container">
+    <h2>프롬프트에 입력해주세요.</h2>
+    <form action="/gemini" method="post">
+        <input type="text" name="Check" placeholder="여기에 입력">
+        <input type="submit" value="제출">
+    </form>
+</div>
 
 </body>
 </html>
