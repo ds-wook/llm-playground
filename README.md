@@ -25,17 +25,20 @@ First, Please match the index url to the environment at hand to use torch.
 ```toml
 # pyproject.toml
 dependencies = [
+    "transformers==4.44.0",
+    "torch==1.13.1+cu116",
+    "accelerate==0.33.0",
+    "jinja2>=3.1.3",
+    "flake8>=7.1.1",
+    "black>=24.10.0",
     "fastapi>=0.115.0",
-    "uvicorn>=0.31.1",
-    "requests>=2.32.3",
-    "pandas>=2.2.3",
     "isort>=5.13.2",
-    "lxml>=5.3.0",
-    "jinja2>=3.1.4",
-    "python-multipart>=0.0.12",
-    "ipykernel>=6.29.5",
-    "tqdm>=4.66.5",
+    "uvicorn>=0.31.1",
+    "nvitop>=1.3.2",
+    "google-generativeai>=0.8.3",
+    "ipython>=8.28.0",
     "python-dotenv>=1.0.1",
+    "python-multipart>=0.0.12",
 ]
 
 [[tool.rye.sources]]
